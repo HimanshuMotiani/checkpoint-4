@@ -69,6 +69,7 @@ font-family: 'Raleway', sans-serif;
     --white:#ffffff;
     --text:#635551;
     --primary: rgb(234, 85, 52);
+    --head: #323030;
 }
 html{
     font-size: 16px;
@@ -86,10 +87,11 @@ html{
     background-color: var(--white);
     padding: 1rem 0;
 }
-h5{
+.heading .brand{
     font-size: 2rem;
     font-weight: 700;
     color: var(--text);
+    text-decoration: none;
 }
 .links a{
     text-decoration: none;
@@ -233,6 +235,9 @@ h6{
 .block{
     display: block;
 }
+#toggle,.bars{
+    display: none
+}
 h3{
     font-size: 2rem;
     font-weight: 700;
@@ -275,9 +280,9 @@ margin-right: .6rem;
     color: var(--primary);
     font-size: 2.4rem;
 }
-.heading-h4{
+.hero-article-white h4{
     font-size: 1.6rem;
-    color: #323030;
+    color:var(--head);
     font-weight: 500;
     margin: 1.4rem 0;
 }
@@ -337,10 +342,10 @@ margin-right: .6rem;
       background: var(--primary);
       color: white;
   }
-  .info h5{
-      color: #343a40;
-      font-size: 1.2rem;
-      font-weight: 700;
+  .h5-head{
+    color:  var(--head);
+    font-size: 1.2rem;
+    font-weight: 700;
   }
   .info .text{
       margin-top: .4rem;
@@ -363,7 +368,7 @@ margin-right: .6rem;
      color: #554945;
  } 
  .about-content p{
-     color: #323030;
+     color: var(--head);
      font-size: 1rem;
      font-weight: 400;
  }
@@ -414,7 +419,7 @@ margin-right: .6rem;
      color: #635551;
  }
  .header p{
-     color: #323030;
+     color: var(--head);
      font-size: 1rem;
      font-weight: 500;
  }
@@ -445,12 +450,8 @@ margin-right: .6rem;
     position: absolute;
     top: -15%;
     left: 45%;
-    
 }
 .services-section h5{
-    color: #343a40;
-    font-size: 1.2rem;
-    font-weight: 700;
     margin-top: 1rem;
     text-transform: uppercase;
 }
@@ -505,15 +506,11 @@ margin-right: .6rem;
     background-color: var(--primary);
 }
 .article-detail:hover .text,
-.article-detail:hover .h5-heading,
+.article-detail:hover h5,
 .article-detail:hover .icon{
    color: rgb(240, 240, 240);
 }
-.description h5{
-    color: #343a40;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
+
 .description .text{
     margin: .6rem 0;
     color: #4b4949;
@@ -633,7 +630,7 @@ margin-right: .6rem;
     display: flex;
 }
 .card h6{
-    color: #323030;
+    color: var(--head);
     font-weight: 600;
 }
 .card .text{
@@ -709,7 +706,7 @@ margin-right: .6rem;
     border-radius: 8px ;
 }
 .pricing-detail li{
-    color: #323030;
+    color: var(--head);
     font-size: 1rem;
     font-weight: 500;
 }
@@ -784,7 +781,7 @@ padding: 2rem 0;
 }
 .question h6{
     font-size: 1.2rem;
-    color: #323030;
+    color: var(--head);
     font-weight: 500;
 }
 .question h6:hover {
@@ -802,7 +799,7 @@ padding: 2rem 0;
     margin-right: .4rem;   
 }
 .faq-question .text{
-color: #323030;
+color: var(--head);
 font-weight: 500;
 }
 
@@ -880,7 +877,7 @@ input::placeholder, textarea::placeholder{
     font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: .4rem;
-    color: #323030;
+    color: var(--head);
 
 }
 .address-detail .address{
@@ -890,11 +887,7 @@ input::placeholder, textarea::placeholder{
     color:#656262;
     font-weight: 700;
 }
-.useful-links h6, .our-services h6, .newsletter h6{
-    color: #323030;
-    font-size: 1.2rem;
-    font-weight: 700;
-}
+
 .address-detail .address,
 .phone a,
 .useful-links a,
@@ -905,10 +898,7 @@ input::placeholder, textarea::placeholder{
     font-weight: 500;
     text-decoration: none;
 }  
-.upper-footer .h6-heading{
-    font-weight: 700;
-    color: rgb(65, 65, 65);
-}
+
 .useful-links i,
 .our-services i{
     color: rgb(255, 153, 130);
@@ -947,7 +937,7 @@ input::placeholder, textarea::placeholder{
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 500;
-    color:#323030;
+    color:var(--head);
     
 }
 .footer-text .color{
@@ -997,7 +987,7 @@ input::placeholder, textarea::placeholder{
 }
 .top-heading h3{
     font-size: 2rem;
-    color: #323030;
+    color: var(--head);
 }
 .blogs {
     padding: 2.5rem 0;
@@ -1007,7 +997,7 @@ input::placeholder, textarea::placeholder{
     margin-bottom: 1.5rem;
 }
 .blog h5{
-    color: rgb(76,66,63);
+    color: #4c423f;
     font-size: 1.4rem;
 } 
 .user{
@@ -1029,7 +1019,7 @@ input::placeholder, textarea::placeholder{
     padding: 1rem;
 }
 .blog-text .text{
-    color: #323030;
+    color: var(--head);
     margin: .6rem 0rem;  
     font-weight: 500;
     font-size: .8rem;
@@ -1120,21 +1110,22 @@ input::placeholder, textarea::placeholder{
     .heading{
         height: 6rem;
     }
-    .heading h3{
-        font-size: 2.5rem;
+    .heading .brand{
+
         position: fixed;
         top: 1.2rem;
         left: 1.5rem;
-        z-index: 99;
+        font-weight: 700;
+        z-index: 102;
     }
-    .toggle-label{
+    .bars{
         display: inline-block;
         position: fixed;
         top: 1.5rem;
         right: 1.5rem;
         font-size: 2rem;
         color: var(--primary);
-        z-index: 99;
+        z-index: 101;
     }
     .nav {
         display: none;
@@ -1145,8 +1136,9 @@ input::placeholder, textarea::placeholder{
         bottom: 0;
         left: 0;
         right: 0;
-        background: red;
-        padding-top: 7rem;
+        background: rgba(255, 255, 255,0.8);
+        padding-top: 12rem;
+        z-index: 100;
     }
     .nav-item {
         margin-top: 1rem;
@@ -1157,9 +1149,6 @@ input::placeholder, textarea::placeholder{
     }
     #toggle:checked ~ .nav{
         display: inline-block;
-    }
-    #toggle{
-        display: none;
     }
     .drop-down{
         margin-top: 15px;
